@@ -58,9 +58,17 @@ body {
 /* Code Blocks */
 pre, code, .highlight {
     /* Font family removed to revert to original theme font */
-    /* FORCE LIGHT TEXT so it shows up against the dark Slate code background */
-    color: #eee !important; 
     font-size: 13px !important;
+    /* Removed the global color override here to restore inline code visibility */
+}
+
+/* PYTHON SPECIFIC FIX */
+/* Applies light text ONLY to Python blocks so they are readable on dark bg, 
+   but does NOT use !important so syntax highlighting colors still work. */
+.language-python pre, 
+.language-python code, 
+.language-python .highlight {
+    color: #f8f8f2; 
 }
 
 /* =========================================
