@@ -63,10 +63,6 @@ pre, code, .highlight {
    3. JUPYTER / COLAB STYLE (PYTHON ONLY)
    ========================================= */
 
-/* Since we can't "import" the Jupyter theme directly, 
-   we manually define the rules here to mimic it perfectly.
-*/
-
 /* 1. Reset the Code Block Background to Light Grey */
 .language-python pre,
 .language-python .highlight {
@@ -88,79 +84,50 @@ pre, code, .highlight {
 /* 3. Syntax Highlighting - Replicating the 'ipython' Pygments style */
 
 /* Keywords (def, return, if, else) -> Bold Green */
-.language-python .k, 
-.language-python .kd, 
-.language-python .kn, 
-.language-python .kp, 
-.language-python .kr, 
-.language-python .kt {
+.language-python .k, .language-python .kd, .language-python .kn, 
+.language-python .kp, .language-python .kr, .language-python .kt {
     color: #008000 !important;
     font-weight: bold !important;
 }
 
 /* Builtins (print, range) -> Green */
-.language-python .nb {
-    color: #008000 !important;
-}
+.language-python .nb { color: #008000 !important; }
 
 /* Comments (# ...) -> Italic Teal */
-.language-python .c, 
-.language-python .cm, 
-.language-python .cp, 
-.language-python .c1, 
-.language-python .cs {
+.language-python .c, .language-python .cm, .language-python .cp, 
+.language-python .c1, .language-python .cs {
     color: #408080 !important;
     font-style: italic !important;
 }
 
 /* Strings ("...", '...') -> Red */
-.language-python .s, 
-.language-python .sb, 
-.language-python .sc, 
-.language-python .sd, 
-.language-python .s2, 
-.language-python .se, 
-.language-python .sh, 
-.language-python .si, 
-.language-python .sx, 
-.language-python .sr, 
-.language-python .s1, 
-.language-python .ss {
+.language-python .s, .language-python .sb, .language-python .sc, 
+.language-python .sd, .language-python .s2, .language-python .se, 
+.language-python .sh, .language-python .si, .language-python .sx, 
+.language-python .sr, .language-python .s1, .language-python .ss {
     color: #BA2121 !important;
 }
 
 /* Numbers (1, 2.5) -> Green */
-.language-python .m, 
-.language-python .mf, 
-.language-python .mh, 
-.language-python .mi, 
-.language-python .mo, 
-.language-python .il {
+.language-python .m, .language-python .mf, .language-python .mh, 
+.language-python .mi, .language-python .mo, .language-python .il {
     color: #008000 !important;
 }
 
 /* Operators (+, -, =, :) -> Purple */
-.language-python .o, 
-.language-python .ow {
+.language-python .o, .language-python .ow {
     color: #AA22FF !important;
     font-weight: bold !important;
 }
 
 /* Functions/Classes (MyClass, my_func) -> Blue */
-.language-python .nf, 
-.language-python .nc {
-    color: #0000FF !important;
-}
+.language-python .nf, .language-python .nc { color: #0000FF !important; }
 
 /* Decorators (@wrapper) -> Purple */
-.language-python .nd {
-    color: #AA22FF !important;
-}
+.language-python .nd { color: #AA22FF !important; }
 
 /* Instance variables (self) -> Dark Grey/Black (default) */
-.language-python .bp {
-    color: #008000 !important;
-}
+.language-python .bp { color: #008000 !important; }
 
 /* =========================================
    4. TABLE FIXES
@@ -190,7 +157,6 @@ table, .dataframe {
     border-collapse: collapse;
     white-space: nowrap; 
     color: #333;
-    /* Font family removed to revert to original theme font */
     font-size: 13px !important;
 }
 
@@ -216,4 +182,20 @@ table th {
 
 #forkme_banner {
     display: none !important;
+}
+
+/* =========================================
+   6. MARKDOWN IMAGE SIZING FIX
+   ========================================= */
+
+/* This targets images added as ![png](...) 
+   It increases their size and centers them.
+*/
+img[alt="png"] {
+    width: 100% !important;      /* Makes the image take up the full column width */
+    max-width: 850px !important; /* Cap it so it doesn't get distorted on huge screens */
+    height: auto !important;     /* Keeps the aspect ratio correct */
+    display: block;
+    margin: 20px auto;           /* Centers the image */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds a nice shadow pop */
 }
