@@ -90,11 +90,8 @@ Along the way, we will:
 **[PHASE 5: EVALUATING ON UNSEEN DATA](#evaluating-on-unseen-data)**
 * [References & Resources](#references--resources)
 
-<div align = "center">
 
 # **DATA COLLECTION**
-
-</div>
 
 ### **The Data**
 
@@ -7462,4 +7459,5 @@ to keep real people like Sarah safe — one transaction at a time. 💳✨
 **📚 Further Reading**
 * *[Fraud Detection using Machine Learning (IEEE Xplore)](https://ieeexplore.ieee.org/document/10895130)*
 * *Handling Imbalanced Datasets in Computer Vision and Fraud Detection*
+
 
