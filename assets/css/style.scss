@@ -1,0 +1,52 @@
+---
+---
+
+/* 1. Import the original Slate theme */
+@import "{{ site.theme }}";
+
+/* =========================================
+   SLATE THEME OVERRIDES
+   ========================================= */
+
+/* 2. Widen the Main Container 
+   Slate uses a class called ".inner" for width limits. */
+.inner {
+    max-width: 1400px !important; /* Increases width from 800px to 1400px */
+    width: 95% !important;        /* Uses 95% of the screen */
+    margin: 0 auto;
+}
+
+/* 3. Widen the Header Content 
+   Ensures the title and download buttons spread out too */
+#header_wrap .inner, 
+#main_content_wrap .inner {
+    max-width: 1400px !important;
+    width: 95% !important;
+}
+
+/* 4. THE TABLE FIX (Scrollable & Code-like) */
+table {
+    display: block;              /* Makes it a block box */
+    width: 100%;                 /* Fills the container */
+    max-width: 100%;             /* Hard limit to prevent leaking */
+    overflow-x: auto;            /* Horizontal scrollbar */
+    white-space: nowrap;         /* No text wrapping */
+    border-collapse: collapse;
+    background: #fff;            /* Slate has a grey background, tables look better white */
+    color: #333;                 /* Dark text for contrast */
+    margin-bottom: 20px;
+}
+
+/* Make table cells look clean */
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+}
+
+/* 5. Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .inner {
+        width: auto !important;
+        margin: 0 20px;
+    }
+}
