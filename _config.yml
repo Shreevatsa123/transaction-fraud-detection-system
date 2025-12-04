@@ -1,5 +1,5 @@
 # _config.yml
-theme: jekyll-theme-minimal
+theme: just-the-docs
 markdown: kramdown
 plugins:
   - jekyll-feed
