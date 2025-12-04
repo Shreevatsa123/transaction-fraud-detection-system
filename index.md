@@ -150,40 +150,7 @@ Before we interrogate any suspicious transaction, we need our investigation gear
 
 Once the toolkit is ready, we can invite the data into the lab.
 
-**New to these libraries?** Explore the official documentation for [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/), [matplotlib](https://matplotlib.org/), [seaborn](https://seaborn.pydata.org/), and [scikit-learn](https://scikit-learn.org/stable/) to dive deeper into each powerful tool.
-
-
-```python
-!pip install xgboost
-```
-
-    Collecting xgboost
-      Downloading xgboost-3.1.2-py3-none-manylinux_2_28_x86_64.whl.metadata (2.1 kB)
-    Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from xgboost) (2.0.2)
-    Collecting nvidia-nccl-cu12 (from xgboost)
-      Downloading nvidia_nccl_cu12-2.28.9-py3-none-manylinux_2_18_x86_64.whl.metadata (2.0 kB)
-    Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from xgboost) (1.16.3)
-    Downloading xgboost-3.1.2-py3-none-manylinux_2_28_x86_64.whl (115.9 MB)
-    [2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m115.9/115.9 MB[0m [31m10.5 MB/s[0m eta [36m0:00:00[0m
-    [?25hDownloading nvidia_nccl_cu12-2.28.9-py3-none-manylinux_2_18_x86_64.whl (296.8 MB)
-    [2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m296.8/296.8 MB[0m [31m1.1 MB/s[0m eta [36m0:00:00[0m
-    [?25hInstalling collected packages: nvidia-nccl-cu12, xgboost
-    Successfully installed nvidia-nccl-cu12-2.28.9 xgboost-3.1.2
-    
-
-
-```python
-!pip install graphviz
-```
-
-    Collecting graphviz
-      Downloading graphviz-0.21-py3-none-any.whl.metadata (12 kB)
-    Downloading graphviz-0.21-py3-none-any.whl (47 kB)
-    [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/47.3 kB[0m [31m?[0m eta [36m-:--:--[0m
-[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m47.3/47.3 kB[0m [31m2.4 MB/s[0m eta [36m0:00:00[0m
-    [?25hInstalling collected packages: graphviz
-    Successfully installed graphviz-0.21
-    
+**New to these libraries?** Explore the official documentation for [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/), [matplotlib](https://matplotlib.org/), [seaborn](https://seaborn.pydata.org/), and [scikit-learn](https://scikit-learn.org/stable/) to dive deeper into each powerful tool.  
 
 
 ```python
@@ -7453,6 +7420,7 @@ to keep real people like Sarah safe — one transaction at a time. 💳✨
 **📚 Further Reading**
 * *[Fraud Detection using Machine Learning (IEEE Xplore)](https://ieeexplore.ieee.org/document/10895130)*
 * *Handling Imbalanced Datasets in Computer Vision and Fraud Detection*
+
 
 
 
