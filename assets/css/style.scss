@@ -58,6 +58,8 @@ body {
 /* Code Blocks */
 pre, code, .highlight {
     /* Font family removed to revert to original theme font */
+    /* FORCE LIGHT TEXT so it shows up against the dark Slate code background */
+    color: #eee !important; 
     font-size: 13px !important;
 }
 
@@ -102,7 +104,7 @@ table th, table td, .dataframe th, .dataframe td {
 table th {
     font-weight: bold;
     background-color: #f9f9f9;
-    color: #333 !important; /* <--- FIXED: Forces text to be dark grey */
+    color: #333 !important; /* Forces table headers to be dark grey */
 }
 
 .colab-df-buttons, .colab-df-convert {
