@@ -4,9 +4,10 @@ title: Transaction Fraud Detection System
 ---
 
 <style>
-  /* This fixes the broken table issue */
   table {
     display: block;
+    width: 100%;
+    max-width: 100%;
     overflow-x: auto;
     white-space: nowrap;
   }
@@ -7474,5 +7475,6 @@ to keep real people like Sarah safe — one transaction at a time. 💳✨
 **📚 Further Reading**
 * *[Fraud Detection using Machine Learning (IEEE Xplore)](https://ieeexplore.ieee.org/document/10895130)*
 * *Handling Imbalanced Datasets in Computer Vision and Fraud Detection*
+
 
 
