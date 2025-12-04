@@ -1,7 +1,6 @@
 # Site settings
 title: Transaction Fraud Detection System
-description: A complete data science journey from raw data to production-ready fraud detection model
-author: Data V Labs
+description: A Project by Tanishqa Aggarwal, Shreevatsa Agnihotri and Dharmesh Sharma
 
 # Jekyll Slate Theme (OFFICIAL METHOD)
 theme: jekyll-theme-slate
