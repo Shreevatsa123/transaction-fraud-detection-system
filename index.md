@@ -4,12 +4,35 @@ title: Transaction Fraud Detection System
 ---
 
 <style>
+  /* 1. WIDEN THE PAGE (Reduces white space) */
+  .wrapper {
+    width: 90% !important;    /* Use 90% of screen width */
+    max-width: 1400px !important; /* Increase max cap from 800px to 1400px */
+  }
+
+  /* 2. DECREASE FONT SIZE */
+  body, p, li {
+    font-size: 16px !important; /* Default is often 18-20px */
+    line-height: 1.6;
+  }
+
+  /* 3. REMOVE BOLD FROM CODE */
+  /* This targets the syntax highlighter classes (keywords, built-ins) */
+  pre, code, .highlight span {
+    font-weight: normal !important;
+  }
+
+  /* 4. FIX TABLES (Force Horizontal Scroll) */
   table {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
+    display: block;        /* Turns table into a block so it respects width */
+    width: 100%;           /* Forces it to fill the container */
+    overflow-x: auto;      /* Adds scrollbar if content is too wide */
+    white-space: nowrap;   /* Prevents ugly text wrapping in cells */
+  }
+  
+  /* Optional: Make table font smaller to fit more data */
+  table td, table th {
+    font-size: 14px;
   }
 </style>
 
@@ -7475,6 +7498,7 @@ to keep real people like Sarah safe — one transaction at a time. 💳✨
 **📚 Further Reading**
 * *[Fraud Detection using Machine Learning (IEEE Xplore)](https://ieeexplore.ieee.org/document/10895130)*
 * *Handling Imbalanced Datasets in Computer Vision and Fraud Detection*
+
 
 
 
