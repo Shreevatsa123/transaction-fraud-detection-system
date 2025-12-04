@@ -20,10 +20,10 @@
 }
 
 /* =========================================
-   2. JUPYTER FONTS & COLORS
+   2. GLOBAL FONTS & COLORS
    ========================================= */
 
-/* Body Text - Clean Sans-Serif */
+/* Body Text - Clean Sans-Serif, White BG, Dark Text */
 body {
     /* Font family removed to revert to original theme font */
     font-size: 14px !important;
@@ -32,9 +32,7 @@ body {
     background-color: #fff !important; 
 }
 
-/* --- THE FIX FOR INVISIBLE HEADINGS --- */
-
-/* A. Headings inside the main content (Body) -> DARK */
+/* Headings -> DARK */
 #main_content_wrap h1, 
 #main_content_wrap h2, 
 #main_content_wrap h3, 
@@ -43,36 +41,129 @@ body {
 #main_content_wrap h6 {
     /* Font family removed to revert to original theme font */
     font-weight: 600 !important;
-    color: #333 !important;       /* Dark text for white background */
+    color: #333 !important;
     margin-top: 1.5em !important;
 }
 
-/* B. Headings inside the Top Banner (Header) -> WHITE */
+/* Headings inside Header -> WHITE */
 #header_wrap h1, 
 #header_wrap h2 {
     /* Font family removed to revert to original theme font */
-    color: #fff !important;       /* FORCE WHITE text so it shows on black background */
+    color: #fff !important;
     margin-top: 0 !important;
 }
 
-/* Code Blocks */
+/* Code Blocks (Global fallback) */
 pre, code, .highlight {
     /* Font family removed to revert to original theme font */
     font-size: 13px !important;
-    /* Removed the global color override here to restore inline code visibility */
-}
-
-/* PYTHON SPECIFIC FIX */
-/* Applies light text ONLY to Python blocks so they are readable on dark bg, 
-   but does NOT use !important so syntax highlighting colors still work. */
-.language-python pre, 
-.language-python code, 
-.language-python .highlight {
-    color: #f8f8f2; 
 }
 
 /* =========================================
-   3. TABLE FIXES
+   3. JUPYTER / COLAB STYLE (PYTHON ONLY)
+   ========================================= */
+
+/* Since we can't "import" the Jupyter theme directly, 
+   we manually define the rules here to mimic it perfectly.
+*/
+
+/* 1. Reset the Code Block Background to Light Grey */
+.language-python pre,
+.language-python .highlight {
+    background-color: #f7f7f7 !important; /* Jupyter standard light grey */
+    border: 1px solid #cfcfcf;             /* Subtle border */
+    border-radius: 2px;
+    padding: 10px;
+}
+
+/* 2. Reset the Base Text Color to Black */
+.language-python code, 
+.language-python pre {
+    color: #333 !important;
+    font-family: Consolas, monospace !important;
+    font-size: 13px !important;
+    text-shadow: none !important; /* Remove Slate's text shadow */
+}
+
+/* 3. Syntax Highlighting - Replicating the 'ipython' Pygments style */
+
+/* Keywords (def, return, if, else) -> Bold Green */
+.language-python .k, 
+.language-python .kd, 
+.language-python .kn, 
+.language-python .kp, 
+.language-python .kr, 
+.language-python .kt {
+    color: #008000 !important;
+    font-weight: bold !important;
+}
+
+/* Builtins (print, range) -> Green */
+.language-python .nb {
+    color: #008000 !important;
+}
+
+/* Comments (# ...) -> Italic Teal */
+.language-python .c, 
+.language-python .cm, 
+.language-python .cp, 
+.language-python .c1, 
+.language-python .cs {
+    color: #408080 !important;
+    font-style: italic !important;
+}
+
+/* Strings ("...", '...') -> Red */
+.language-python .s, 
+.language-python .sb, 
+.language-python .sc, 
+.language-python .sd, 
+.language-python .s2, 
+.language-python .se, 
+.language-python .sh, 
+.language-python .si, 
+.language-python .sx, 
+.language-python .sr, 
+.language-python .s1, 
+.language-python .ss {
+    color: #BA2121 !important;
+}
+
+/* Numbers (1, 2.5) -> Green */
+.language-python .m, 
+.language-python .mf, 
+.language-python .mh, 
+.language-python .mi, 
+.language-python .mo, 
+.language-python .il {
+    color: #008000 !important;
+}
+
+/* Operators (+, -, =, :) -> Purple */
+.language-python .o, 
+.language-python .ow {
+    color: #AA22FF !important;
+    font-weight: bold !important;
+}
+
+/* Functions/Classes (MyClass, my_func) -> Blue */
+.language-python .nf, 
+.language-python .nc {
+    color: #0000FF !important;
+}
+
+/* Decorators (@wrapper) -> Purple */
+.language-python .nd {
+    color: #AA22FF !important;
+}
+
+/* Instance variables (self) -> Dark Grey/Black (default) */
+.language-python .bp {
+    color: #008000 !important;
+}
+
+/* =========================================
+   4. TABLE FIXES
    ========================================= */
 
 .colab-df-container {
@@ -112,7 +203,7 @@ table th, table td, .dataframe th, .dataframe td {
 table th {
     font-weight: bold;
     background-color: #f9f9f9;
-    color: #333 !important; /* Forces table headers to be dark grey */
+    color: #333 !important; 
 }
 
 .colab-df-buttons, .colab-df-convert {
@@ -120,10 +211,9 @@ table th {
 }
 
 /* =========================================
-   4. UI ELEMENT HIDING
+   5. UI ELEMENT HIDING
    ========================================= */
 
-/* Hide the 'View on GitHub' ribbon/button */
 #forkme_banner {
     display: none !important;
 }
