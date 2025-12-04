@@ -8,47 +8,48 @@
    CUSTOM OVERRIDES
    ========================================= */
 
-/* 2. Fix the Layout Width & Central Whitespace */
+/* 2. Fix the Layout Width */
 .wrapper {
-    max-width: 1400px !important; /* Makes the page much wider (was ~800px) */
-    width: 95% !important;        /* Uses almost full width of the screen */
+    max-width: 1400px !important; 
+    width: 95% !important;        
     margin: 0 auto;
 }
 
-/* 3. Adjust the Content Area (Right Side) */
+/* 3. Adjust the Content Area */
 section {
-    width: 75% !important;        /* Text takes up 75% of the page width */
-    float: right !important;      /* Forces it to the right */
-    padding-left: 20px;           /* Small gap between menu and text */
-    max-width: none !important;   /* Removes any internal limits on text width */
+    width: 75% !important;        
+    float: right !important;      
+    padding-left: 20px;           
+    max-width: none !important;   
 }
 
-/* 4. Adjust the Sidebar (Left Side) */
+/* 4. Adjust the Sidebar */
 header {
-    width: 20% !important;        /* Sidebar takes up 20% */
+    width: 20% !important;        
     float: left !important;
 }
 
-/* 5. Fix the Table Scrolling */
+/* 5. TABLE FIX - "Code Block" Style */
 table {
-    display: block;               /* Required to make scroll work */
-    width: 100%;                  /* Table takes full width of the section */
-    overflow-x: auto;             /* Adds horizontal scrollbar if table is too big */
-    white-space: nowrap;          /* Optional: Keeps rows on one line */
-    border-collapse: collapse;
+    display: block;               /* Essential: Turns table into a block container */
+    width: 100%;                  /* Fills the section width */
+    max-width: 100%;              /* CRITICAL: Stops it from leaking out of the page */
+    overflow-x: auto;             /* Adds the scrollbar when content is too wide */
+    white-space: nowrap;          /* CRITICAL: Forces text to stay on one line (like code) */
+    border-collapse: collapse;    
+    
+    /* Optional: Visual style to match code blocks */
+    border: 1px solid #e1e4e8;    
+    margin-bottom: 1.5em;
 }
 
-/* Optional: Make the scrollbar look nicer */
-table::-webkit-scrollbar {
-    height: 8px;
-}
-table::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 4px;
+/* Style the cells */
+table th, table td {
+    padding: 10px;
+    border: 1px solid #e1e4e8;
 }
 
-/* 6. Mobile Responsiveness 
-   (Reset everything to a single column on phones) */
+/* 6. Mobile Responsiveness */
 @media print, screen and (max-width: 900px) {
     .wrapper {
         width: auto !important;
