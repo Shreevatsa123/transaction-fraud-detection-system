@@ -8,32 +8,45 @@
    SLATE THEME OVERRIDES
    ========================================= */
 
-/* 2. Widen the Main Container 
-   Slate uses a class called ".inner" for width limits. */
+/* 2. LAYOUT WIDTH
+   - width: 80% adds the white space you asked for on the sides.
+   - max-width: 1200px stops it from getting too wide on huge screens. 
+*/
 .inner {
-    max-width: 1400px !important; /* Increases width from 800px to 1400px */
-    width: 95% !important;        /* Uses 95% of the screen */
+    max-width: 1200px !important; 
+    width: 80% !important;        
     margin: 0 auto;
 }
 
-/* 3. Widen the Header Content 
-   Ensures the title and download buttons spread out too */
+/* Ensure the Header matches the Content width */
 #header_wrap .inner, 
 #main_content_wrap .inner {
-    max-width: 1400px !important;
-    width: 95% !important;
+    max-width: 1200px !important;
+    width: 80% !important;
 }
 
-/* 4. THE TABLE FIX (Scrollable & Code-like) */
+/* 3. TABLE FIXES (Crucial for Data Science) */
+
+/* Option A: For tables wrapped in <div class="table-wrapper"> (Best Practice) */
+.table-wrapper {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; 
+}
+
+/* Option B: Fallback for raw tables without the wrapper */
 table {
-    display: block;              /* Makes it a block box */
-    width: 100%;                 /* Fills the container */
-    max-width: 100%;             /* Hard limit to prevent leaking */
-    overflow-x: auto;            /* Horizontal scrollbar */
-    white-space: nowrap;         /* No text wrapping */
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
     border-collapse: collapse;
-    background: #fff;            /* Slate has a grey background, tables look better white */
-    color: #333;                 /* Dark text for contrast */
+    background: #fff;  /* White background helps read data on Slate's grey theme */
+    color: #333;       /* Dark text for contrast */
     margin-bottom: 20px;
 }
 
@@ -43,10 +56,10 @@ table th, table td {
     padding: 8px 12px;
 }
 
-/* 5. Mobile Responsiveness */
+/* 4. MOBILE RESPONSIVENESS */
 @media screen and (max-width: 768px) {
     .inner {
-        width: auto !important;
-        margin: 0 20px;
+        width: 90% !important; /* On phones, we use more space so text is readable */
+        margin: 0 auto;
     }
 }
