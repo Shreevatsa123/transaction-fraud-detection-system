@@ -1,3 +1,29 @@
+# Site settings
+title: Transaction Fraud Detection System
+description: A complete data science journey from raw data to production-ready fraud detection model
+author: Data V Labs
+
+# Jekyll Slate Theme (OFFICIAL METHOD)
 remote_theme: pages-themes/slate@v0.2.0
+
+# Plugins (REQUIRED for remote_theme)
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# GitHub Pages settings
+baseurl: "/transaction-fraud-detection-system"
+url: "https://data-v-labs.github.io"
+
+# Markdown processor
+markdown: kramdown
+
+# Build settings
+exclude:
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
