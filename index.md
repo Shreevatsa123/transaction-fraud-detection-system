@@ -1,28 +1,6 @@
 # 🎬 **OPENING SCENE**
 
-```text
-╔═════════════════════════════════════════════════════════════════════╗
-║  FADE IN: A coffee shop in Boston. 3:47 PM on a Tuesday.            ║
-║  Our protagonist: Sarah, sipping a latte, living her best life      ║
-║                                                                     ║
-║  *PHONE BUZZES* 🔔                                                  ║
-║                                                                     ║
-║  NOTIFICATION: ⚠️ SUSPICIOUS ACTIVITY DETECTED                      ║
-║  💳 $2,847 charge in Lagos, Nigeria                                 ║
-║  📍 She's in Boston. She's never been to Nigeria.                   ║
-║                                                                     ║
-║  CUT TO: Sarah spitting out her latte                               ║
-║  SARAH: "DID THE CAPITAL LETTERS JUST GET BIGGER?!"                 ║
-║         (They did. This is serious.)                                ║
-╚═════════════════════════════════════════════════════════════════════╝
-
-```
-
-<div align="center">
-  <img src="https://media1.tenor.com/m/L6DH2NVtXJwAAAAC/spit-out-my-coffee-lisa-loud.gif" width="400" alt="Cute Shocked">
-  <br>
-  <em>Poor Sarah</em>
-</div>
+![png](Gemini_Generated_Image_p9mmwxp9mmwxp9mm.png)
 
 ### **The Challenge: Security vs. Sanity**
 
@@ -7420,6 +7398,7 @@ to keep real people like Sarah safe — one transaction at a time. 💳✨
 **📚 Further Reading**
 * *[Fraud Detection using Machine Learning (IEEE Xplore)](https://ieeexplore.ieee.org/document/10895130)*
 * *Handling Imbalanced Datasets in Computer Vision and Fraud Detection*
+
 
 
 
