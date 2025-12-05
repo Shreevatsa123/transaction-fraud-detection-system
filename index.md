@@ -5,12 +5,12 @@
 ### **The Challenge: Security vs. Sanity**
 
 The Numbers Don't Lie (But Fraudsters Do)
-- 💰 $165 BILLION in projected fraud losses between 2023-2027 globally
-- 😤 1 in 4 people have experienced payment fraud
-- ⏱️ 24/7 - Fraudsters are always online (they don't have a 9-5 job)
-- 🛑 FALSE POSITIVES - Legit customers getting blocked feels WORSE than getting hacked.
+- $165 BILLION in projected fraud losses between 2023-2027 globally
+- 1 in 4 people have experienced payment fraud
+- 24/7 - Fraudsters are always online (they don't have a 9-5 job)
+- FALSE POSITIVES - Legit customers getting blocked feels WORSE than getting hacked.
 
-Think about it: You're at the grocery store. You try to pay. DECLINED 🚫. You just got Sarah'd. And now you're embarrassed. And angry. And hungry.
+Think about it: You're at the grocery store. You try to pay. DECLINED . You just got Sarah'd. And now you're embarrassed. And angry. And hungry.
 
 
 
@@ -19,9 +19,9 @@ We are stepping into the shoes of a fraud analytics team at a digital payments c
 Our mission: **Spot suspicious transactions fast enough that people like Sarah never lose a dollar.**  
 
 Think of this notebook as a mix of:
-- a **crime investigation story** 🔍  
-- a **data science lab** 🧪  
-- and a **model-building workshop** 🤖  
+- a **crime investigation story**  
+- a **data science lab** 
+- and a **model-building workshop** 
 
 Along the way, we will:
 - get to know our **cast of characters** (features, devices, email domains, cards)  
@@ -60,7 +60,10 @@ Along the way, we will:
 * [4.5 Evaluating our fraud detector: Beyond plain accuracy](#45-evaluating-our-fraud-detector-beyond-plain-accuracy)
 
 **[PHASE 5: EVALUATING ON UNSEEN DATA](#evaluating-on-unseen-data)**
-* [References & Resources](#references--resources)
+
+**[FUTURE WORK](#future-work-the-next-frontier)**
+
+**[REFERENCES & RECOURCES](#references--resources)**
 
 
 # **DATA COLLECTION**
@@ -121,10 +124,10 @@ First, we need to gather our tools. We’re importing the standard data science 
 
 Before we interrogate any suspicious transaction, we need our investigation gear:
 
-- `pandas` → our **data detective** reading CSV files and cleaning up the mess 🕵️‍♂️  
-- `numpy` → the **math engine** handling numbers behind the scenes 🔢  
-- `matplotlib` / `seaborn` → the **visual storytellers** turning patterns into plots 📊  
-- `sklearn` → the **model workshop**, where we test algorithms and tune them like race cars 🏎️  
+- `pandas` → our **data detective** reading CSV files and cleaning up the mess   
+- `numpy` → the **math engine** handling numbers behind the scenes 
+- `matplotlib` / `seaborn` → the **visual storytellers** turning patterns into plots  
+- `sklearn` → the **model workshop**, where we test algorithms and tune them like race cars   
 
 Once the toolkit is ready, we can invite the data into the lab.
 
@@ -5589,7 +5592,7 @@ print("Merged shape:", df_merged_data.shape)
 
 # **DATA PREPROCESSING**
 
-### 🧹 Cleaning the crime scene
+### Cleaning the crime scene
 
 Real-world transaction data is **messy**:
 - Some fields are missing because the device never sent them.  
@@ -6283,9 +6286,9 @@ print(f"\nTotal remaining NaN values in the entire dataset: {total_nans}")
 Now that the data is somewhat cleaned, it is time to **look at patterns, not just rows**.
 
 In a fraud story, EDA is where you:
-- discover that **fraud tends to cluster** at certain times of day ⏰  
-- notice that certain **card types or devices** behave strangely 📱  
-- see that some **email domains** pop up in a suspicious number of fraud cases 📧  
+- discover that **fraud tends to cluster** at certain times of day  
+- notice that certain **card types or devices** behave strangely   
+- see that some **email domains** pop up in a suspicious number of fraud cases   
 
 We will:
 - visualize distributions of key features,  
@@ -6910,7 +6913,7 @@ plt.title("Decision Path of a Single Tree (Depth 3)", fontsize=16)
 plt.show()
 ```
 
-    Visualizing a Single Decision Tree (Depth=7)...
+    Visualizing a Single Decision Tree (Depth=3)...
     
 
 
@@ -7065,10 +7068,10 @@ We care about questions like:
 - **How well can we rank transactions by risk?** → **ROC-AUC** / **PR-AUC**
 
 The confusion matrix tells a very practical story:
-- Top-left: ✅ genuine customers treated correctly.  
-- Top-right: ❌ **false positives** – annoyed customers, but no money lost.  
-- Bottom-left: ❌ **false negatives** – missed fraud, real financial loss.  
-- Bottom-right: ✅ **correctly caught frauds**.
+- Top-left:  genuine customers treated correctly.  
+- Top-right:  **false positives** – annoyed customers, but no money lost.  
+- Bottom-left:  **false negatives** – missed fraud, real financial loss.  
+- Bottom-right:  **correctly caught frauds**.
 
 A risk team may prefer:
 - to tolerate some **false positives**  
@@ -7323,7 +7326,7 @@ print(final_display.to_string(index=False))
          3222495.0            0       0.0
     
 
-#### ***The Closure***
+### **The Closure**
 The Unveiling of the Vault: Upon unlocking our 5% holdout set, the evidence completely sequestered from our training process, our XGBoost model achieved a ROC-AUC of 0.9743. In forensic terms, this means our suspect profile is incredibly robust, maintaining elite performance even on "cold cases" it had never seen before.
 
 **Evidence Analysis:**
@@ -7334,70 +7337,39 @@ The Unveiling of the Vault: Upon unlocking our 5% holdout set, the evidence comp
 
 **Impact:** Implementing this system would likely save millions in chargeback losses while ensuring that the vast majority of legitimate customers can buy their party supplies without interruption.
 
-# 🎬 **CLOSING SCENE: What happens to Sarah now?**
-
-Let us go back to our opening scene.
-
-Sarah gets that scary notification:  
-> **“Suspicious activity detected.”**
-
-Behind the scenes, a system like the one we just built:
-- reads her transaction in **milliseconds**,  
-- checks it against hundreds of features (card, device, time, amount, email, history),  
-- and produces a high fraud score.
-
-
-```text
-╔═════════════════════════════════════════════════════════════════════╗
-║  INT. COFFEE SHOP - CONTINUOUS                                      ║
-║                                                                     ║
-║  The machine learning model runs in milliseconds.                   ║
-║  Prediction: 0.98 (FRAUD) 🔴                                        ║
-║                                                                     ║
-║  *PHONE BUZZES AGAIN* 📲                                            ║
-║                                                                     ║
-║  NOTIFICATION: 🛡️ TRANSACTION BLOCKED                               ║
-║  BANK APP: "Attempted charge of $2,847. Was this you?"              ║
-║                                                                     ║
-║  Sarah taps [NO].                                                   ║
-║                                                                     ║
-║  SARAH: "Nice try. Not today."                                      ║
-║         (She takes another sip. Her bank account is safe.)          ║
-║                                                                     ║
-║  FADE OUT.                                                          ║
-╚═════════════════════════════════════════════════════════════════════╝
-```
-
-This notebook walked through:
-- understanding the raw transaction logs,  
-- cleaning and engineering features,  
-- training multiple models,  
-- and judging them with practical metrics.
-
-Is this production-ready? Not yet.  
-But it is a **solid prototype** of how data science, domain knowledge, and modeling can team up  
-to keep real people like Sarah safe — one transaction at a time. 💳✨
-
 <div align="center">
   <img src="https://media1.tenor.com/m/nlrU6h8WIlgAAAAC/dexter-lab.gif" width="400" alt="Cute Shocked">
   <br>
   
 </div>
 
+# 🎬 **CLOSING SCENE: Sarah's new ending**
+
+![png](index_files/Gemini_Generated_Image_2oqjl72oqjl72oqj.png)
+
+
+
+# **Future Work: The Next Frontier**
+
+As we look ahead, the next stage is to make our fraud detection system faster, clearer, and more adaptable. Moving from batch processing to real-time scoring will allow transactions to be evaluated within milliseconds, which is essential in real-world payment environments. Adding model explainability through tools like SHAP will help analysts and regulators understand exactly why a transaction was flagged. Because fraud patterns constantly change, we’ll also need automated retraining pipelines that detect when the model’s performance drops and update it accordingly. In the future, we can explore more advanced methods such as graph neural networks to capture relationships between users and transactions, and semi-supervised learning to take advantage of large volumes of unlabeled data. Together, these improvements will make the system more reliable and better equipped to adapt to evolving fraud behavior.
+
+
+
 # **References & Resources**
 
-**📂 Data Source**
+**Data Source**
 * **[IEEE-CIS Fraud Detection Dataset](https://www.kaggle.com/c/ieee-fraud-detection):** Provided by Vesta Corporation.
 * *Context:* The dataset contains real-world e-commerce transactions with a wide range of features including device type, card details, and transaction time.
 
-**🛠️ Methodologies & Libraries**
+**Methodologies & Libraries**
 * **[Scikit-Learn](https://scikit-learn.org/):** Used for data preprocessing (Scaling, Encoding), imputation, and baseline modeling (Logistic Regression, Random Forest).
 * **[XGBoost](https://xgboost.readthedocs.io/):** Used for high-performance gradient boosting to detect complex fraud patterns.
 * **[Matplotlib](https://matplotlib.org/) & [Seaborn](https://seaborn.pydata.org/):** Used for visualizing the "Crime Scene" (EDA) and model performance (ROC Curves).
 
-**📚 Further Reading**
+**Further Reading**
 * *[Fraud Detection using Machine Learning (IEEE Xplore)](https://ieeexplore.ieee.org/document/10895130)*
 * *Handling Imbalanced Datasets in Computer Vision and Fraud Detection*
+
 
 
 
